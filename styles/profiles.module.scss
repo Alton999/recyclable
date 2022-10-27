@@ -1,0 +1,59 @@
+.container {
+	width: 80%;
+	margin: auto;
+	padding-bottom: 3em;
+}
+
+.header {
+	display: flex;
+	margin-bottom: 15px;
+	h2 {
+		margin-left: 15px;
+		line-height: 30px;
+	}
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	h3 {
+		font-size: 15px;
+	}
+
+	.resultsContainer {
+		ul {
+			list-style-type: none;
+			padding: 0;
+			li[bin="Recycling"] {
+				background-color: #f1c40f;
+			}
+
+			li[bin="Paper"] {
+				background-color: #2ecc71;
+			}
+			li[bin="General"] {
+				background-color: #c0392b;
+				color: white;
+			}
+
+			li {
+				margin: 8px 0;
+				width: 100%;
+				background-color: #fff;
+				box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 15px;
+				border-radius: 10px;
+
+				h4 {
+					margin: 0;
+					width: 50%;
+				}
+			}
+		}
+	}
+}

@@ -14,18 +14,22 @@ class ScanningStep extends Component {
 			isLoading: false,
 			decodedResult: null,
 			showScanner: true,
-			showResults: false
+			showResults: false,
+			allResults: []
 		};
 	}
 
 	componentDidMount() {
 		const onScanSuccess = (decodedText, decodedResult) => {
 			this.setState((state) => (state.decodedResult = JSON.parse(decodedText)));
-			// this.props.setScannedResults(
-			// 	[...this.props.scannedResults],
-			// 	JSON.parse(decodedText)
-			// );
-			console.log(this.props.scannedResults);
+
+			// We want to append the result to a local storage array for global access
+			let existingResults = JSON.parse(localStorage.getItem("allResults"));
+			if (existingResults == null) existingResults = [];
+			localStorage.setItem("currentItem", decodedText);
+			existingResults.push(decodedText);
+			localStorage.setItem("allResults", JSON.stringify(existingResults));
+
 			console.log(decodedText);
 
 			this.setState({ showScanner: false, showResults: true });
