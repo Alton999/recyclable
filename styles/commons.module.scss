@@ -1,6 +1,31 @@
+.container {
+	width: 90%;
+	height: 100vh;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 .logo {
-  font-size: 36px;
-  span {
-    font-weight: bolder;
-  }
+	font-size: 36px;
+	span {
+		font-weight: bolder;
+	}
+}
+
+.button {
+	font-family: inherit;
+	text-align: center;
+	width: 90%;
+	height: 62px;
+	font-size: 20px;
+	margin-top: 16px;
+	font-weight: bolder;
+	color: white;
+	background-color: #e67e22;
+	border-radius: 10px;
+	border: none;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

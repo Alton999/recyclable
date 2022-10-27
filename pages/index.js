@@ -1,24 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import { useState, useEffect } from "react";
 
-import styles from "../styles/home.module.scss"
-import commonStyles from "../styles/commons.module.scss"
-
+import Step1 from "./introStep";
+import Step2 from "./scanningStep";
 
 const Home = () => {
-  return (
-    <>
-      <main>
-        <div className={commonStyles.logo}>
-          recyc | <span>ABLE</span>
-        </div>
-        <div>Hello here</div>
+	const [step, setStep] = useState(1);
 
-      </main>
-    </>
+	const navForward = () => {
+		setStep(step + 1);
+		console.log(step);
+	};
 
-  )
-}
+	const navBack = () => {
+		setStep(step - 1);
+	};
 
+	return (
+		<>
+			{step === 1 && <Step1 navForward={navForward} navBack={navBack} />}
+			{step === 2 && <Step2 navForward={navForward} navBack={navBack} />}
+		</>
+	);
+};
 
 export default Home;

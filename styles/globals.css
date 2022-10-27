@@ -1,18 +1,24 @@
+@import url("https://use.typekit.net/rny6chh.css");
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Proxima Nova, system-ui, sans-serif;
+	padding: 0;
+	margin: 0;
+}
 
+html,
+body,
+button {
+	font-family: proxima-nova, work-sans, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /*@media (prefers-color-scheme: dark) {*/
