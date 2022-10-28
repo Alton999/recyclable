@@ -48,6 +48,7 @@ const Profile = () => {
 					<ul>
 						{allResults.map((result, i) => {
 							console.log(result.bin);
+
 							return (
 								<li key={i} bin={result.bin}>
 									<p>{i + 1}</p>
