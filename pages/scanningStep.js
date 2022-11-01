@@ -21,7 +21,6 @@ class ScanningStep extends Component {
 
 	componentDidMount() {
 		const onScanSuccess = (decodedText, decodedResult) => {
-			console.log(decodedResult);
 			this.setState((state) => (state.decodedResult = JSON.parse(decodedText)));
 
 			// We want to append the result to a local storage array for global access
@@ -30,7 +29,6 @@ class ScanningStep extends Component {
 			localStorage.setItem("currentItem", decodedText);
 			existingResults.push(decodedText);
 			localStorage.setItem("allResults", JSON.stringify(existingResults));
-
 			console.log(decodedText);
 
 			this.setState({ showScanner: false, showResults: true });
