@@ -26,10 +26,12 @@ class ScanningStep extends Component {
 			// We want to append the result to a local storage array for global access
 			let existingResults = JSON.parse(localStorage.getItem("allResults"));
 			if (existingResults == null) existingResults = [];
+
 			localStorage.setItem("currentItem", decodedText);
-			existingResults.push(decodedText);
+
+			existingResults.push(JSON.parse(decodedText));
 			localStorage.setItem("allResults", JSON.stringify(existingResults));
-			console.log(decodedText);
+			// console.log("DecodedText Mobile:", decodedText);
 
 			this.setState({ showScanner: false, showResults: true });
 

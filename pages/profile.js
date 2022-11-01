@@ -12,12 +12,12 @@ const Profile = () => {
 	// Fetch all results from local storage on first render
 	useEffect(() => {
 		const results = JSON.parse(localStorage.getItem("allResults"));
-
+		console.log(results);
 		if (results) {
 			let tempResults = [];
 			for (let item in results) {
 				// console.log("ITEM:", results[item]);
-				tempResults.push(JSON.parse(results[item]));
+				tempResults.push(results[item]);
 			}
 			setAllResults(tempResults);
 			console.log(allResults);

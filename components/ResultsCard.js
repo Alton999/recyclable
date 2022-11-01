@@ -4,6 +4,7 @@ import styles from "../styles/resultsCard.module.scss";
 import commonStyles from "../styles/commons.module.scss";
 
 const ResultsCard = ({ results }) => {
+	console.log(results);
 	return (
 		<section className={styles.cardContainer}>
 			<div className={styles.card}>
